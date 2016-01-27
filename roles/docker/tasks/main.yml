@@ -25,3 +25,7 @@
 
 - name: set docker options
   lineinfile: dest=/etc/default/docker regexp=^DOCKER_OPTS= line='{{ docker_opts }}'
+
+- name: install docker-compose
+  get_url: url=https://github.com/docker/compose/releases/download/1.5.2/docker-compose-{{ ansible_system }}-{{ ansible_architecture }} dest=/usr/local/bin/docker-compose mode=755
+
