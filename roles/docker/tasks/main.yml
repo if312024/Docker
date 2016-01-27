@@ -3,9 +3,11 @@
 ---
 - name: add docker key
   apt: name='lxc-docker*' purge=yes state=absent
+  ignore_errors: true
 
 - name: add docker key
   apt: name='lxc-io*' purge=yes state=absent
+  ignore_errors: true
 
 - name: add docker key
   apt_key: keyserver={{ docker_key }} id={{ docker_id }}

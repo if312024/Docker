@@ -1,8 +1,0 @@
-- hosts: docker
-  user: admin
-  sudo: yes
-  vars:
-    docker_opts: 'DOCKER_OPTS="-r=false"'
-  roles:
-    - docker
-   
