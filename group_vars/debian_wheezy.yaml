@@ -1,0 +1,2 @@
+#repo for debian wheezy
+docker_repo: deb https://apt.dockerproject.org/repo debian-wheezy main

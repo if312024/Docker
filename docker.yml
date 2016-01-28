@@ -1,9 +1,6 @@
 - hosts: ansible
   user: admin
-  sudo: yes
-#  private-key=~/GDPLabs-Halasson/Key/Kaspay-eWallet.pem
-  vars:
-    docker_opts: 'DOCKER_OPTS="-r=false"'
+  sudo: yes 
   roles:
-    - docker
+    - docker 
    

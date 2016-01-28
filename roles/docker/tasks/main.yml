@@ -11,18 +11,17 @@
 
 - name: add docker key
   apt_key: keyserver={{ docker_key }} id={{ docker_id }}
-  when: ansible_distribution == "Debian" and ansible_distribution_release  == "jessie"  
 
 - name: create docker repo list
-  copy: content={{ docker_repo_jessie}} dest=/etc/apt/sources.list.d/docker.list
+  copy: content={{ docker_repo_jessie }} dest=/etc/apt/sources.list.d/docker.list
   when: ansible_distribution == "Debian" and ansible_distribution_release == "jessie"
 
 - name: create docker repo list
-  copy: content={{ docker_repo_wheezy}} dest=/etc/apt/sources.list.d/docker.list
+  copy: content={{ docker_repo_wheezy }} dest=/etc/apt/sources.list.d/docker.list
   when: ansible_distribution == "Debian" and ansible_distribution_release == "wheezy"
 
 - name: create docker repo list
-  copy: content={{ docker_repo_stretch}} dest=/etc/apt/sources.list.d/docker.list
+  copy: content={{ docker_repo_stretch }} dest=/etc/apt/sources.list.d/docker.list
   when: ansible_distribution == "Debian" and ansible_distribution_release == "stretch"
 
 - name: install docker
